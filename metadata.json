@@ -170,6 +170,9 @@
             "font__companyname--line-height" : "@font-swatch10-line-height",
             "font__companyname--letter-spacing" : "@font-swatch10-letter-spacing"
         },
+        "footer": {
+            "color__footer--background" : "transparent"
+        },
         "typography": {
             "color__h1--text": "@font-swatch1-color",
             "font__h1--font-family" : "@font-swatch1-font-family",
