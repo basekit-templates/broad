@@ -63,19 +63,19 @@ a.company-link:hover {
 // -----------------------------
 
 // Widget Overlay
-.widget__extendednavigation {
-    + .widget-overlay {
-        @media @tablet {
-            display: none;
-        }
+.widget__extendednavigation + .widget-overlay {
+    @media @tablet {
+        display: none;
     }
+}
 
-    &.open + .widget-overlay {
+.open {
+    .widget__extendednavigation + .widget-overlay {
         @media @tablet {
             z-index: 10400!important;
             display: block;
             margin: 44px auto 0;
-
+    
             &:hover {
                 background: rgba(0, 147, 135, 0.2);
                 border: 1px solid rgb(0, 148, 136);
