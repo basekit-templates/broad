@@ -22,8 +22,6 @@
 
 @import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
 
-// @import "@{templateLocal}/bk-v8-test.less";
-
 // ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
 //    your template to guarentee widgets come to life. Proivides default styles for all widgets.
 
@@ -35,8 +33,6 @@
 @import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
 @import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
-
-@import "@{templateLocal}/less/fork-variables.less"; // Forked Templates
 
 
 
@@ -53,7 +49,7 @@
 .site-container {
     width: auto;
     @media only screen and (min-width: 1140px) {
-        width: @value__container--width;
+        width: 960px;
         margin: 0 auto;
     }
 }
@@ -71,8 +67,8 @@
     margin-top: 0;
     margin-bottom: 20px;
     @media only screen and (min-width: 1140px) {
-        width: @value__widget--width;
-        margin: @value__widget--margin--desktop;
+        width: 100%;
+        margin: 0 auto 20px;
     }
 }
 
