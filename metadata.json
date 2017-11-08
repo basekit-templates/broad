@@ -1,10 +1,10 @@
 {
-    "name": "Broad",
+    "name": "Blank-template",
     "widgetVersion":2,
     "thumbnail": "thumbnail.png",
     "screenshot": "screenshot.jpg",
     "templateType":"standard",
-    "pageTypes": ["home"],
+    "pageTypes": [""],
     "images":[
         "images/feature-bg.jpg",
         "images/logo.png",
