@@ -1,24 +1,14 @@
 {% extends "layout.twig" %}
-
 {% block content %}
 
-        <!-- Template Feature Widget -->
+    {{widget('feature', 'featurehome', {
+        'header': 'profile',
+        'strapline': 'profile',
+        'defaultBgImg': asset("images/feature-bg.jpg"),
+        'positionTopPercentage': '0',
+        'showBtn': false
+    })|raw}}
 
-        {{widget('feature', 'featurehome', {
-            'header': 'profile',
-            'strapline': 'profile',
-            'defaultBgImg': asset("images/feature-bg.jpg"),
-            'positionTopPercentage': '0',
-            'showBtn': false
-        })|raw}}
-
-        <!-- Main Widget Zone -->
-
-        <div>
-                {{zone('main')|raw}}
-        </div>
+    {{zone('main')|raw}}
 
 {% endblock %}
-
-
-

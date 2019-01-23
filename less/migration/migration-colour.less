@@ -1,0 +1,172 @@
+
+// --------------------------------------
+//  Migration - Section Colour Contrast
+// --------------------------------------
+
+
+
+
+//  Light Colour
+// ---------------------------------------
+
+
+.style--light {
+
+
+    // Button
+    [data-name="button"] .button,
+    [data-name="contentgroup"] .link,
+    [data-name="socialicons"] .social-item,
+    [data-name="dropbox"] .button,
+    [data-name="paypalbuynow"] .button,
+    [data-name="tweet"] .button {
+        background: @color--dark;
+        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    }
+
+
+    // Social Icon Widget - Icon Colour
+    [data-name="socialicons"] .social-link,
+    [data-name="socialicons"] .social-link:before {
+        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    }
+
+
+    // Content Widgets - Headings
+    [data-name*="content"] {
+        h1, h2, h3, h4, h5 {
+            color: contrast(@color--light, @color--dark, @color--accent, 43%);
+        }
+    }
+
+
+    // Content Widgets - Body
+    [data-name*="content"] {
+        p, li, a, blockquote, h6 {
+            color: fade(contrast(@color--light, @color--dark, @color--accent, 43%), 95%);
+        }
+    }
+
+
+    // Other Elements
+    td,
+    .phone-number-link,
+    .clicktocall__label,
+    .dropbox__label,
+    .ecomproduct__product-body,
+    .blogpost__post-body {
+        color: fade(contrast(@color--light, @color--dark, @color--accent, 43%), 95%);
+    }
+}
+
+
+
+
+//  Accent Colour
+// ---------------------------------------
+
+
+.style--accent {
+
+
+    // Button
+    [data-name="button"] .button,
+    [data-name="contentgroup"] .link,
+    [data-name="socialicons"] .social-item,
+    [data-name="dropbox"] .button,
+    [data-name="paypalbuynow"] .button,
+    [data-name="tweet"] .button {
+        background: @color--dark;
+        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    }
+
+
+    // Social Icon Widget - Icon Colour
+    [data-name="socialicons"] .social-link,
+    [data-name="socialicons"] .social-link:before {
+        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    }
+
+
+    // Content Widgets - Headings
+    [data-name*="content"] {
+        h1, h2, h3, h4, h5 {
+            color: contrast(@color--accent, @color--dark, @color--accent, 43%);
+        }
+    }
+
+
+    // Content Widgets - Body
+    [data-name*="content"] {
+        p, li, a, blockquote, h6 {
+            color: fade(contrast(@color--accent, @color--dark, @color--accent, 43%), 95%);
+        }
+    }
+
+
+    // Other Elements
+    td,
+    .phone-number-link,
+    .clicktocall__label,
+    .dropbox__label,
+    .ecomproduct__product-body,
+    .blogpost__post-body {
+        color: fade(contrast(@color--accent, @color--dark, @color--light, 43%), 95%);
+    }
+}
+
+
+
+
+//  Dark Colour
+// ---------------------------------------
+
+
+.style--dark {
+
+
+    // Buttons
+    [data-name="button"] .button,
+    [data-name="contentgroup"] .link,
+    [data-name="socialicons"] .social-item,
+    [data-name="dropbox"] .button,
+    [data-name="paypalbuynow"] .button,
+    [data-name="tweet"] .button {
+        background: @color--light;
+        color: contrast(@color--light, @color--dark, @color--light, 43%);
+    }
+
+
+    // Social Icon Widget - Icon Colour
+    [data-name="socialicons"] .social-link,
+    [data-name="socialicons"] .social-link:before {
+        color: contrast(@color--light, @color--dark, @color--light, 43%);
+    }
+
+
+    // Content Widgets - Headings
+    [data-name*="content"] {
+        h1, h2, h3, h4, h5 {
+            color: contrast(@color--dark, @color--accent, @color--light, 43%);
+        }
+    }
+
+
+    // Content Widgets - Body
+    [data-name*="content"] {
+        p, li, a, blockquote, h6 {
+            color: fade(contrast(@color--dark, @color--accent, @color--light, 43%), 95%);
+        }
+    }
+
+
+    // Other Elements
+    td,
+    .phone-number-link,
+    .clicktocall__label,
+    .dropbox__label,
+    .ecomproduct__product-body,
+    .blogpost__post-body {
+        color: fade(contrast(@color--dark, @color--accent, @color--light, 43%), 95%);
+    }
+}

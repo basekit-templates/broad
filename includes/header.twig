@@ -1,12 +1,8 @@
-<!-- Template Widgets -->
+<div class="template-header">
+    {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+    <div class="brand">
+        {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+    </div>
+</div>
 
-        {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
-
-        <div class="template-header">
-            <div class="brand">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-            </div>
-        </div>
-
-<!-- End Template Widgets -->

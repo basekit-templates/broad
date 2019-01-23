@@ -43,7 +43,15 @@
 
 .brand {
     text-align: center;
-    margin: 0 0 .5em;
+    margin: 1.5em 0 .5em;
+
+    @media @tablet {
+        margin-top: 3em;
+    }
+
+    @media @mobile {
+        margin-top: 2.5em;
+    }
 }
 
 .logo-image {
@@ -61,6 +69,15 @@ a.company-link:hover {
 // -----------------------------
 // 3.  #Navigation
 // -----------------------------
+
+.widget[data-widget-type="extendednavigation"] {
+    margin-bottom: 1.5em;
+
+    @media @mobile {
+        margin-bottom: 1em;
+    }
+}
+
 
 // Widget Overlay
 .widget__extendednavigation + .widget-overlay {
@@ -86,10 +103,6 @@ a.company-link:hover {
 }
 
 // Remove margin from ul nav list and widget
-
-.widget[data-widget-type="extendednavigation"] {
-    margin-bottom: 0;
-}
 
 .navigation-list {
     margin: 0;

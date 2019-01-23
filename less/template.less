@@ -28,16 +28,17 @@ body {
 
 
 .template-header {
-    padding: 1.5em 0 3em;
+    padding-bottom: 2.5em;
     @media @tablet {
-        padding: 3em 0 2.5em;
+        padding: 0 0 2.5em;
     }
     @media @mobile {
-        padding: 2.5em 0 1.5em;
+        padding: 0 0 1.5em;
     }
 }
 
 .template-header,
+[data-widget-type="feature"],
 .template-footer {
     width: 90%;
     margin: 0 5%;
@@ -247,6 +248,12 @@ td {
         -webkit-align-items: flex-end;
         -ms-flex-align: end;
         align-items: flex-end;
+        padding: 30px 40px;
+    }
+
+    .signupform__form-group,
+    .blogsearch__form-group {
+        margin-bottom: 0;
     }
 
     .signupform__form-group:first-child,
