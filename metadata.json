@@ -157,10 +157,7 @@
     "styles": {
         "colors": {
             "color__primary": "@color-swatch3",
-            "color__secondary": "@color-swatch2",
-            "color--light": "#f2f2f2",
-            "color--accent": "#96d3ed",
-            "color--dark": "#838383"
+            "color__secondary": "@color-swatch2"
         },
         "site": {
             "color__body--background": "@color-swatch1",
