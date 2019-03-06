@@ -6,6 +6,106 @@
 
 
 
+//  All Colours
+// ---------------------------------------
+
+
+// Button
+[data-name="button"] .button,
+[data-name="contentgroup"] .link,
+[data-name="dropbox"] .button,
+[data-name="paypalbuynow"] .button,
+[data-name="tweet"] .button,
+[data-name="filedownload"] .button,
+[data-name="ecombasketsummary"] .button,
+[data-name="blogpostlist"] .blogpostlist__read-more {
+
+    .row--style-light & {
+        background-color: @color--dark;
+        color: contrast(@color--dark, @color--accent, @color--light);
+    }
+
+    .row--style-accent & {
+        background-color: @color--dark;
+        color: contrast(@color--dark, @color--dark, @color--accent);
+    }
+    
+    .row--style-dark & {
+        background-color: @color--accent;
+        color: contrast(@color--accent, @color--dark, @color--light);
+    }
+
+
+    &:hover {
+
+        .row--style-light & {
+            background-color: @color--accent;
+            color: contrast(@color--accent, @color--dark, @color--light);
+        }
+
+        .row--style-accent & {
+            background-color: darken(@color--accent, 10%);
+            color: contrast(@color--accent, @color--dark, @color--light);
+        }
+        
+        .row--style-dark & {
+            background-color: @color--light;
+            color: contrast(@color--light, @color--dark, @color--light);
+        }
+    }
+}
+
+
+
+// Content Widgets - Headings
+[data-name*="content"], {
+    h1, h2, h3, h4, h5 {
+        .color__text--contrast();
+    }
+}
+
+.ecomcategorieslist__category-list-body h3,
+.listing-title,
+.ecomproductslist__title-link,
+.ecomfeaturedproducts__title-link,
+.ecombasketsummary__summary-title {
+    .color__text--contrast();
+}
+
+
+
+// Content Widgets - Body
+[data-name*="content"] {
+    p, li, a, blockquote, h6 {
+        .color__text--contrast--lighter();
+    }
+}
+
+
+// Other Elements
+td,
+.phone-number-link,
+.clicktocall__label,
+.dropbox__label,
+.ecomproductslist__product-item-price,
+.ecomproductslist__listing-order,
+.pagination-item:not(.current) .button--pagination:not(:hover),
+.ecomfeaturedproducts__product-item-price,
+.blogpostlist__title-link,
+.blogpost__post-title,
+.blogpost__post-body *,
+.blogpostlist__post-excerpt *,
+.blogpostlist__timestamp,
+.blogpost__timestamp,
+.blogpost__category-title,
+.blogpost__tags-title,
+.ecombasketsummary__message p {
+    .color__text--contrast--lighter();
+}
+
+
+
+
 //  Light Colour
 // ---------------------------------------
 
@@ -13,51 +113,20 @@
 .style--light {
 
 
-    // Button
-    [data-name="button"] .button,
-    [data-name="contentgroup"] .link,
-    [data-name="socialicons"] .social-item,
-    [data-name="dropbox"] .button,
-    [data-name="paypalbuynow"] .button,
-    [data-name="tweet"] .button {
-        background: @color--dark;
-        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    // Social icons
+    [data-name="socialicons"] .social-item:not(:hover) {
+        background: fade(@color--dark, 80%);
+        color: contrast(@color--dark, @color--accent, @color--light);
     }
 
 
     // Social Icon Widget - Icon Colour
-    [data-name="socialicons"] .social-link,
-    [data-name="socialicons"] .social-link:before {
-        color: contrast(@color--dark, @color--accent, @color--light, 43%);
-    }
-
-
-    // Content Widgets - Headings
-    [data-name*="content"] {
-        h1, h2, h3, h4, h5 {
-            color: contrast(@color--light, @color--dark, @color--accent, 43%);
-        }
-    }
-
-
-    // Content Widgets - Body
-    [data-name*="content"] {
-        p, li, a, blockquote, h6 {
-            color: fade(contrast(@color--light, @color--dark, @color--accent, 43%), 95%);
-        }
-    }
-
-
-    // Other Elements
-    td,
-    .phone-number-link,
-    .clicktocall__label,
-    .dropbox__label,
-    .ecomproduct__product-body,
-    .blogpost__post-body {
-        color: fade(contrast(@color--light, @color--dark, @color--accent, 43%), 95%);
+    [data-name="socialicons"] .social-item:not(:hover) .social-link,
+    [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
+        color: contrast(@color--dark, @color--accent, @color--light);
     }
 }
+
 
 
 
@@ -69,49 +138,17 @@
 .style--accent {
 
 
-    // Button
-    [data-name="button"] .button,
-    [data-name="contentgroup"] .link,
-    [data-name="socialicons"] .social-item,
-    [data-name="dropbox"] .button,
-    [data-name="paypalbuynow"] .button,
-    [data-name="tweet"] .button {
-        background: @color--dark;
-        color: contrast(@color--dark, @color--accent, @color--light, 43%);
+    // Social icons
+    [data-name="socialicons"] .social-item:not(:hover) {
+        background: fade(@color--dark, 90%);
+        color: contrast(@color--dark, @color--accent, @color--light);
     }
 
 
     // Social Icon Widget - Icon Colour
-    [data-name="socialicons"] .social-link,
-    [data-name="socialicons"] .social-link:before {
-        color: contrast(@color--dark, @color--accent, @color--light, 43%);
-    }
-
-
-    // Content Widgets - Headings
-    [data-name*="content"] {
-        h1, h2, h3, h4, h5 {
-            color: contrast(@color--accent, @color--dark, @color--accent, 43%);
-        }
-    }
-
-
-    // Content Widgets - Body
-    [data-name*="content"] {
-        p, li, a, blockquote, h6 {
-            color: fade(contrast(@color--accent, @color--dark, @color--accent, 43%), 95%);
-        }
-    }
-
-
-    // Other Elements
-    td,
-    .phone-number-link,
-    .clicktocall__label,
-    .dropbox__label,
-    .ecomproduct__product-body,
-    .blogpost__post-body {
-        color: fade(contrast(@color--accent, @color--dark, @color--light, 43%), 95%);
+    [data-name="socialicons"] .social-item:not(:hover) .social-link,
+    [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
+        color: contrast(@color--dark, @color--accent, @color--light);
     }
 }
 
@@ -125,48 +162,16 @@
 .style--dark {
 
 
-    // Buttons
-    [data-name="button"] .button,
-    [data-name="contentgroup"] .link,
-    [data-name="socialicons"] .social-item,
-    [data-name="dropbox"] .button,
-    [data-name="paypalbuynow"] .button,
-    [data-name="tweet"] .button {
-        background: @color--light;
-        color: contrast(@color--light, @color--dark, @color--light, 43%);
+    // Social icons
+    [data-name="socialicons"] .social-item:not(:hover) {
+        background: fade(@color--light, 90%);
+        color: contrast(@color--light, @color--dark, @color--accent);
     }
 
 
     // Social Icon Widget - Icon Colour
-    [data-name="socialicons"] .social-link,
-    [data-name="socialicons"] .social-link:before {
-        color: contrast(@color--light, @color--dark, @color--light, 43%);
-    }
-
-
-    // Content Widgets - Headings
-    [data-name*="content"] {
-        h1, h2, h3, h4, h5 {
-            color: contrast(@color--dark, @color--accent, @color--light, 43%);
-        }
-    }
-
-
-    // Content Widgets - Body
-    [data-name*="content"] {
-        p, li, a, blockquote, h6 {
-            color: fade(contrast(@color--dark, @color--accent, @color--light, 43%), 95%);
-        }
-    }
-
-
-    // Other Elements
-    td,
-    .phone-number-link,
-    .clicktocall__label,
-    .dropbox__label,
-    .ecomproduct__product-body,
-    .blogpost__post-body {
-        color: fade(contrast(@color--dark, @color--accent, @color--light, 43%), 95%);
+    [data-name="socialicons"] .social-item:not(:hover) .social-link,
+    [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
+        color: contrast(@color--light, @color--dark, @color--light);
     }
 }
