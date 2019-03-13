@@ -6,11 +6,114 @@
 
 
 
-//  All Colours
-// ---------------------------------------
+
+//  Heading Colour
+// ------------------------------
 
 
-// Button
+// Heading Colour Application
+h1, .heading--1,
+h2, .heading--2,
+h3, .heading--3,
+.legend:not(.signupform__legend):not(.contactform__legend):not(.advancedcontactform__legend),
+.blog-post-title a,
+.blogpostlist__title-link,
+.blogpost__post-title,
+.ecom-productslist-title,
+.ecomproductslist__title-link,
+.featuredproducts-header,
+.ecom-featuredproducts-title,
+.ecomfeaturedproducts__listing-title {
+    .color__text--contrast();  // Fallback if heading colour isn't set
+}
+
+
+h4, .heading--4,
+h5, .heading--5,
+.label:not(.clicktocall__label):not(.signupform__label):not(.contactform__label):not(.advancedcontactform__label),
+time {
+    .color__text--contrast();  // Fallback if heading colour isn't set
+}
+
+
+[data-name*="content"], {
+    h1, h2, h3, h4, h5 {
+        .color__text--contrast();
+    }
+}
+
+
+.ecomcategorieslist__category-list-body h3,
+.listing-title,
+.ecomproductslist__title-link,
+.ecomfeaturedproducts__title-link,
+.ecombasketsummary__summary-title {
+    .color__text--contrast();
+}
+
+
+
+
+//  Body Font Colour
+// -------------------
+
+
+// Body Colour Application
+p, .paragraph,
+li,
+blockquote,
+td,
+.phone-number-link,
+.clicktocall__label,
+.clicktocall a,
+h6, .heading--6,
+[data-name="content"],
+a:not(.tweet-metadata a),
+.dropbox__label,
+.bk-full-name,
+.ecomproduct__product-body,
+.productlist-filter label,
+.productlist-item-count,
+.blogpost__post-body,
+.ecomproductslist__product-item-price {
+    .color__text--contrast--lighter();
+}
+
+
+// Content Widgets - Body
+[data-name*="content"] {
+    p, li, a, blockquote, h6 {
+        .color__text--contrast--lighter();
+    }
+}
+
+
+
+
+
+
+//  Content Link Colour
+// ---------------------------------
+
+
+// Content Link Colour Application
+[data-name="content"] a {
+    .color__text--contrast();
+}
+
+
+.contact-icon {
+    .color__text--contrast();
+}
+
+
+
+
+
+//  Button Colours
+// ---------------------------------
+
+
 [data-name="button"] .button,
 [data-name="contentgroup"] .link,
 [data-name="dropbox"] .button,
@@ -27,7 +130,7 @@
 
     .row--style-accent & {
         background-color: @color--dark;
-        color: contrast(@color--dark, @color--dark, @color--accent);
+        color: contrast(@color--dark, @color--accent, @color--light);
     }
     
     .row--style-dark & {
@@ -44,8 +147,8 @@
         }
 
         .row--style-accent & {
-            background-color: darken(@color--accent, 10%);
-            color: contrast(@color--accent, @color--dark, @color--light);
+            background-color: lighten(@color--dark, 20%);
+            color: contrast(@color--dark, @color--accent, @color--light);
         }
         
         .row--style-dark & {
@@ -57,32 +160,12 @@
 
 
 
-// Content Widgets - Headings
-[data-name*="content"], {
-    h1, h2, h3, h4, h5 {
-        .color__text--contrast();
-    }
-}
-
-.ecomcategorieslist__category-list-body h3,
-.listing-title,
-.ecomproductslist__title-link,
-.ecomfeaturedproducts__title-link,
-.ecombasketsummary__summary-title {
-    .color__text--contrast();
-}
 
 
-
-// Content Widgets - Body
-[data-name*="content"] {
-    p, li, a, blockquote, h6 {
-        .color__text--contrast--lighter();
-    }
-}
+//  Other Colours
+// ---------------------------------
 
 
-// Other Elements
 td,
 .phone-number-link,
 .clicktocall__label,
@@ -101,6 +184,12 @@ td,
 .blogpost__tags-title,
 .ecombasketsummary__message p {
     .color__text--contrast--lighter();
+}
+
+.phone-number-link {
+    @media @mobile {
+        background: transparent;
+    }
 }
 
 
@@ -124,6 +213,11 @@ td,
     [data-name="socialicons"] .social-item:not(:hover) .social-link,
     [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
         color: contrast(@color--dark, @color--accent, @color--light);
+    }
+
+
+    .post-footer {
+        border-color: fade(contrast(@color--light, @color--dark, @color--accent), 15%);
     }
 }
 
@@ -150,6 +244,11 @@ td,
     [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
         color: contrast(@color--dark, @color--accent, @color--light);
     }
+
+
+    .post-footer {
+        border-color: fade(contrast(@color--accent, @color--dark, @color--light), 15%);
+    }
 }
 
 
@@ -173,5 +272,10 @@ td,
     [data-name="socialicons"] .social-item:not(:hover) .social-link,
     [data-name="socialicons"] .social-item:not(:hover) .social-link:before {
         color: contrast(@color--light, @color--dark, @color--light);
+    }
+
+
+    .post-footer {
+        border-color: fade(contrast(@color--dark, @color--accent, @color--light), 15%);
     }
 }
