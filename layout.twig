@@ -6,52 +6,47 @@
         {% include basekit.headScript %}
     </head>
 
-    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}" {{ isV10sSite ? 'id="migrated-site"' : '' }}>
 
         <!-- Container -->
-
         <div class="site-container">
 
             <!-- Page Content -->
-
             <section class="inner-container">
+
                 <!-- Header Include -->
                 {% include "includes/header.twig" %}
 
                 <!-- Main Widget Zone -->
                 {% block content %}
                 {% endblock %}
-
             </section>
 
             <!-- Footer Include -->
             {% include "includes/footer.twig" %}
 
-            <!-- End Page Content -->
-
-        </div><!-- End Container -->
+        </div>
 
 
         {% include basekit.bodyScript %}
 
 
         <!-- Nav Menu Script -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-           <script nonce="{{ numberUsedOnce }}">window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')
-        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 
         <script nonce="{{ numberUsedOnce }}">
             // Toggles class open to display/hide the whole navigation
             $(document).on("click", ".navigation-toggle", function() {
                 $( "body" ).toggleClass( "open" );
             });
-            // Togglse class open to display/hide folders
+
+            // Toggles class open to display/hide folders
             $( ".navigation-item.folder" ).each(function() {
                 $( this ).click(function() {
                     $( this ).toggleClass( "open" );
                 });
             });
         </script>
-
     </body>
 </html>
