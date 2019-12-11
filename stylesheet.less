@@ -50,9 +50,12 @@
 // Widgets
 // -------
 
-#page-zones__main .widget:not([data-name="row"]) {
+.widget:not([data-name="row"]) {
     margin-top: 0;
     margin-bottom: 20px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
     @media only screen and (min-width: 1140px) {
         width: @value__widget--width;
         margin: @value__widget--margin--desktop;
@@ -73,7 +76,7 @@
     .columns-four-second,
     .columns-four-third,
     .columns-four-fourth {
-        .widget {
+        .widget:not([data-name="row"]) {
             width: auto;
             margin: 10px 0;
             @media only screen and (min-width: 1140px) {
@@ -84,7 +87,7 @@
     }
 }
 
-.brand .widget,
+.brand .widget:not([data-name="row"]) ,
 .widget[data-widget-type="profile"] {
     width: 100%;
     margin: 0;
