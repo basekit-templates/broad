@@ -742,21 +742,13 @@ a.company-link:hover {
     .control-text {
         display: none;
     }
-    // Same height as images
-    min-height: 400px;
-    @media @tablet {
-        min-height: 300px;
-    }
-    @media @mobile {
-        min-height: 200px;
-    }
 }
 
 // Slideshow Navigation for Tablet and Desktop
 @media only screen and (min-width:480px) {
     .slide-navigation {
         position: absolute;
-        top: 0;
+        top: ~"calc(50% - 40px)";
         width: 100%;
         margin: 0;
         .button {
